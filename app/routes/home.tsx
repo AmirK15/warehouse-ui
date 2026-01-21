@@ -1,5 +1,5 @@
 import type { Route } from "./+types/home";
-import { WarehouseManagementSystem } from "../warehouse/warehouse";
+import WarehouseManagementSystem from "../warehouse/warehouse";
 
 export function meta({}: Route.MetaArgs) {
   return [
