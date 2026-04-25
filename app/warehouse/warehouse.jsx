@@ -286,7 +286,7 @@ const WarehouseManagementSystem = () => {
 
             {/* Контент */}
             <div className="max-w-7xl mx-auto p-6">
-                {loading && <div className="text-center py-8">Загрузка...</div>}
+                {loading && <div className="text-center py-8 text-black">Загрузка...</div>}
 
                 {/* Вкладка: Товары */}
                 {activeTab === 'products' && !loading && (
@@ -459,7 +459,7 @@ const WarehouseManagementSystem = () => {
                             <div className="bg-white p-6 rounded-lg shadow">
                                 <div className="text-gray-500 text-sm mb-2">Общая стоимость склада</div>
                                 <div className="text-3xl font-bold text-green-600">
-                                    {parseFloat(statistics.total_warehouse_value).toLocaleString()} ₸
+                                    {parseFloat(statistics.total_warehouse_value).toLocaleString()} сом
                                 </div>
                             </div>
                             <div className="bg-white p-6 rounded-lg shadow">
@@ -482,7 +482,7 @@ const WarehouseManagementSystem = () => {
                                             <div className="text-sm text-gray-600">
                                                 {category.products_count} товаров, {category.total_quantity} единиц
                                             </div>
-                                            <div className="font-semibold">{parseFloat(category.total_value).toLocaleString()} ₸</div>
+                                            <div className="font-semibold">{parseFloat(category.total_value).toLocaleString()} сом</div>
                                         </div>
                                     </div>
                                 ))}
@@ -494,7 +494,7 @@ const WarehouseManagementSystem = () => {
 
             {/* Модальное окно: Товар */}
             {showProductModal && (
-                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+                <div className="fixed inset-0 flex items-center justify-center p-4 z-50 background">
                     <div className="bg-white rounded-lg p-6 max-w-md w-full">
                         <h2 className="text-xl font-bold mb-4">
                             {editingProduct ? 'Редактировать товар' : 'Добавить товар'}
@@ -591,7 +591,7 @@ const WarehouseManagementSystem = () => {
 
             {/* Модальное окно: Операция */}
             {showOperationModal && (
-                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+                <div className="fixed inset-0 bg-black background flex items-center justify-center p-4 z-50">
                     <div className="bg-white rounded-lg p-6 max-w-md w-full">
                         <h2 className="text-xl font-bold mb-4">Новая операция</h2>
                         <div className="space-y-4">
