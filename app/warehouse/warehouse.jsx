@@ -351,9 +351,9 @@ const WarehouseManagementSystem = () => {
                           {product.quantity} {product.unit}
                         </span>
                                         </td>
-                                        <td className="px-6 py-4">{parseFloat(product.price).toLocaleString()} ₸</td>
+                                        <td className="px-6 py-4">{parseFloat(product.price).toLocaleString()} сом</td>
                                         <td className="px-6 py-4 font-medium">
-                                            {parseFloat(product.total_value).toLocaleString()} ₸
+                                            {parseFloat(product.total_value).toLocaleString()} сом
                                         </td>
                                         <td className="px-6 py-4">
                         <span className={`px-2 py-1 rounded text-xs ${
@@ -438,7 +438,7 @@ const WarehouseManagementSystem = () => {
                                             )}
                                         </td>
                                         <td className="px-6 py-4 font-medium">{op.quantity}</td>
-                                        <td className="px-6 py-4">{parseFloat(op.operation_value).toLocaleString()} ₸</td>
+                                        <td className="px-6 py-4">{parseFloat(op.operation_value).toLocaleString()} сом</td>
                                         <td className="px-6 py-4 text-gray-600">{op.note}</td>
                                     </tr>
                                 ))}
@@ -548,7 +548,7 @@ const WarehouseManagementSystem = () => {
                             </div>
                             <div className="grid grid-cols-2 gap-4">
                                 <div>
-                                    <label className="block text-sm font-medium mb-1">Цена (₸)</label>
+                                    <label className="block text-sm font-medium mb-1">Цена (сом)</label>
                                     <input
                                         type="number"
                                         value={productForm.price}
